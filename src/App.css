@@ -1,14 +1,18 @@
-@media (max-width: 600px) {
-  nav ul li {
-    display: block;
-    margin: 10px 0;
-  }
-}
-
+/* Основні стилі */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden; /* Видаляємо горизонтальні повзунки */
+}
+
+html {
+  height: 100%;
+  width: 100%;
 }
 
 .App {
@@ -16,28 +20,47 @@ body {
 }
 
 .App-header {
+  display: flex; /* Використовуємо flexbox для вирівнювання заголовка і меню в один рядок */
+  justify-content: space-between; /* Розташовуємо заголовок і меню по краях */
+  align-items: center; /* Вирівнюємо елементи по вертикалі */
   background-color: #282c34;
   padding: 20px;
   color: white;
 }
 
+.App-header h1 {
+  margin: 0; /* Видаляємо відступи у заголовка */
+}
+
 nav ul {
-  list-style-type: none;
+  list-style-type: none; /* Видаляємо стандартні маркери списку */
+  margin: 0;
   padding: 0;
+  display: flex; /* Розташовуємо елементи списку в рядок */
+  flex-wrap: wrap; /* Додаємо можливість переносу елементів на новий рядок */
+  justify-content: center; /* Центруємо меню, якщо місця багато */
 }
 
 nav ul li {
-  display: inline;
-  margin-right: 15px;
+  margin-right: 20px; /* Відступи між пунктами меню */
+}
+
+nav ul li:last-child {
+  margin-right: 0; /* Видаляємо останній зайвий відступ */
 }
 
 nav ul li a {
   color: white;
-  text-decoration: none;
+  text-decoration: none; /* Видаляємо підкреслення з посилань */
+}
+
+nav ul li a:hover {
+  text-decoration: underline; /* Додаємо підкреслення при наведенні на посилання */
 }
 
 main {
   padding: 20px;
+  flex: 1; /* Займає залишковий простір між хедером і футером */
 }
 
 section {
@@ -48,7 +71,77 @@ footer {
   background-color: #282c34;
   color: white;
   padding: 10px;
-  position: absolute;
+  text-align: center; /* Центруємо текст у футері */
   width: 100%;
+  position: relative; /* Змінюємо позиціонування, щоб футер завжди був під контентом */
   bottom: 0;
+}
+
+/* Стилі для мобільних пристроїв */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column; /* Виводимо елементи списку в стовпчик на маленьких екранах */
+    align-items: center; /* Центруємо елементи списку */
+  }
+
+  nav ul li {
+    margin: 10px 0; /* Додаємо вертикальні відступи між пунктами меню */
+    width: 100%; /* Додаємо ширину 100% для елементів */
+  }
+
+  .App-header {
+    flex-direction: column; /* Переносимо заголовок і меню в стовпчик */
+    text-align: center;
+  }
+
+  .App-header h1 {
+    margin-bottom: 20px; /* Відступ між заголовком і меню */
+  }
+}
+
+/* Корекція розмірів елементів */
+* {
+  box-sizing: border-box; /* Забезпечує врахування padding і border у розмір елементів */
+}
+/* Стилі для навігації */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+/* Стилі для кнопки "Швидка перевірка" */
+.quick-check-button {
+  background: linear-gradient(90deg, #ff6a00, #ff9500); /* Градієнт кольорів */
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 50px; /* Округлі краї */
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease; /* Плавний перехід для ефектів */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Тінь для об’єму */
+  text-transform: uppercase; /* Великі літери */
+}
+
+.quick-check-button:hover {
+  background: linear-gradient(90deg, #ff9500, #ff6a00); /* Зміна напрямку градієнта */
+  transform: translateY(-3px); /* Легке піднімання при наведенні */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Глибша тінь при наведенні */
+}
+
+.quick-check-button:active {
+  transform: translateY(0); /* Зворотній ефект при натисканні */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Повертаємо попередню тінь */
+}
+
+.quick-check-button:focus {
+  outline: none; /* Прибираємо стандартну обводку */
 }

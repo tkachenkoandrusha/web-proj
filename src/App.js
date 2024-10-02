@@ -4,16 +4,22 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>Apple Center Service</h1>
-        <nav>
-          <ul>
-            <li><a href="#home">Головна</a></li>
-            <li><a href="#about">Про нас</a></li>
-            <li><a href="#contact">Контакти</a></li>
-          </ul>
-        </nav>
-      </header>
+  <header className="App-header">
+  <h1>Apple Center Service</h1>
+  <nav>
+    <ul>
+      <li><a href="#home">Головна</a></li>
+      <li><a href="#rem">Ремонт</a></li>
+      <li><a href="#user">Клієнту</a></li>
+      <li><a href="#tradein">Trade-in</a></li>
+      <li>
+        <button className="quick-check-button">
+          Швидка перевірка
+        </button>
+      </li>
+    </ul>
+  </nav>
+</header>
       <main>
         <section id="home">
           <h2>Вітання</h2>
