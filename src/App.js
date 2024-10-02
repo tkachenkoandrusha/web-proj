@@ -26,6 +26,8 @@ function App() {
         <section id="contact">
           <h2>Контакти</h2>
           <p>Зв'яжіться з нами за електронною поштою: info@example.com</p>
+          <li><a href="#instagram">Інстаграм</a></li>
+          <li><a href="#tiktok">Tik Tok</a></li>
         </section>
       </main>
       <footer>
