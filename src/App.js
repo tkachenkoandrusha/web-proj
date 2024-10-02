@@ -22,8 +22,14 @@ function App() {
 </header>
       <main>
         <section id="home">
-          <h2>Вітання</h2>
-          <p>Ласкаво просимо на нашу сторінку!</p>
+        <h1 className="hero-title">AppleCenter</h1>
+        <div className="hero-info">
+          <span>® Тільки оригінальні запчастини</span>
+          <span>🔄 Заміна у Вашій присутності</span>
+          <span>👍 До 5 років гарантії на ремонт</span>
+          <span>🔬 Власна лабораторія у місті для складних ремонтів</span>
+        </div>
+        <img src={require('./iphone_x_large_2x.png')} alt="iPhone" className="hero-image" />
         </section>
         <section id="about">
           <h2>Про нас</h2>

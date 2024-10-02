@@ -1,11 +1,16 @@
 /* Основні стилі */
-body {
+* {
+  box-sizing: border-box; /* Забезпечує врахування padding і border у розмір елементів */
   margin: 0;
-  font-family: Arial, sans-serif;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
   background-color: #f0f0f0;
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   overflow-x: hidden; /* Видаляємо горизонтальні повзунки */
 }
@@ -26,6 +31,10 @@ html {
   background-color: #282c34;
   padding: 20px;
   color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .App-header h1 {
@@ -52,9 +61,11 @@ nav ul li:last-child {
 nav ul li a {
   color: white;
   text-decoration: none; /* Видаляємо підкреслення з посилань */
+  transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
+  color: #0078d7;
   text-decoration: underline; /* Додаємо підкреслення при наведенні на посилання */
 }
 
@@ -70,50 +81,21 @@ section {
 footer {
   background-color: #282c34;
   color: white;
-  padding: 10px;
+  padding: 20px;
   text-align: center; /* Центруємо текст у футері */
   width: 100%;
-  position: relative; /* Змінюємо позиціонування, щоб футер завжди був під контентом */
+  position: relative;
   bottom: 0;
+  font-size: 14px;
 }
 
-/* Стилі для мобільних пристроїв */
-@media (max-width: 600px) {
-  nav ul {
-    flex-direction: column; /* Виводимо елементи списку в стовпчик на маленьких екранах */
-    align-items: center; /* Центруємо елементи списку */
-  }
-
-  nav ul li {
-    margin: 10px 0; /* Додаємо вертикальні відступи між пунктами меню */
-    width: 100%; /* Додаємо ширину 100% для елементів */
-  }
-
-  .App-header {
-    flex-direction: column; /* Переносимо заголовок і меню в стовпчик */
-    text-align: center;
-  }
-
-  .App-header h1 {
-    margin-bottom: 20px; /* Відступ між заголовком і меню */
-  }
+footer a {
+  color: #0078d7;
+  text-decoration: none;
 }
 
-/* Корекція розмірів елементів */
-* {
-  box-sizing: border-box; /* Забезпечує врахування padding і border у розмір елементів */
-}
-/* Стилі для навігації */
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-}
-
-nav ul li {
-  margin-right: 20px;
+footer a:hover {
+  text-decoration: underline;
 }
 
 /* Стилі для кнопки "Швидка перевірка" */
@@ -144,4 +126,96 @@ nav ul li {
 
 .quick-check-button:focus {
   outline: none; /* Прибираємо стандартну обводку */
+}
+
+/* Hero Section */
+.hero-section {
+  padding: 50px 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  max-width: 1200px;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.hero-section:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); /* Додано тінь при наведенні */
+}
+
+.hero-title {
+  font-size: 48px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase; /* Великі літери */
+  letter-spacing: 2px; /* Інтервал між літерами */
+  transition: color 0.3s ease;
+}
+
+.hero-title:hover {
+  color: #0078d7; /* Зміна кольору при наведенні */
+}
+
+.hero-info {
+  font-size: 20px;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.hero-info span {
+  display: block;
+  margin: 10px 0;
+  color: #0078d7; /* Стиль з акцентним кольором */
+}
+
+.hero-image {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  transition: transform 0.3s ease;
+}
+
+.hero-image:hover {
+  transform: scale(1.05); /* Легке збільшення при наведенні */
+}
+
+/* Мобільні стилі */
+@media (max-width: 600px) {
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .hero-info {
+    font-size: 16px;
+  }
+
+  .hero-image {
+    max-width: 300px;
+  }
+
+  .hero-section {
+    padding: 30px 10px;
+  }
+
+  .App-header {
+    flex-direction: column; /* Переносимо заголовок і меню в стовпчик */
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column; /* Виводимо елементи списку в стовпчик на маленьких екранах */
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0; /* Додаємо вертикальні відступи між пунктами меню */
+    width: 100%; /* Додаємо ширину 100% для елементів */
+  }
+
+  .App-header h1 {
+    margin-bottom: 20px; /* Відступ між заголовком і меню */
+  }
 }
