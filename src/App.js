@@ -22,7 +22,7 @@ function App() {
 </header>
       <main>
         <section id="home">
-        <h1 className="hero-title">AppleCenter</h1>
+        <h1 className="hero-title">Apple  Center</h1>
         <div className="hero-info">
           <span>® Тільки оригінальні запчастини</span>
           <span>🔄 Заміна у Вашій присутності</span>
