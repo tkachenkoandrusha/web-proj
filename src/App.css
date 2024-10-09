@@ -479,3 +479,20 @@ footer a:hover {
 footer p {
   margin-top: 20px; /* Space above copyright */
 }
+#where {
+  display: flex;
+  justify-content: center; /* Вирівнювання по горизонталі */
+  align-items: center; /* Вирівнювання по вертикалі */
+  padding: 20px 0; /* Зменшені відступи зверху і знизу */
+  background-color: #f0f0f0; /* Можна додати фон для контрасту */
+}
+
+#where .text {
+  text-align: center; /* Вирівнювання тексту всередині контейнера */
+}
+
+#where h2 {
+  font-size: 2em; /* Розмір заголовка */
+  color: #333; /* Колір тексту */
+  margin: 0; /* Відсутність зайвих відступів у заголовка */
+}
