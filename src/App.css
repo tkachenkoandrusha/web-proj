@@ -251,7 +251,7 @@ footer a:hover {
 
 .text h2:last-of-type {
   font-size: 28px;
-  color: #007aff;
+  color: #720d3b;
   font-weight: bold;
   margin-bottom: 20px;
 }
@@ -285,4 +285,197 @@ footer a:hover {
   max-height: 400px; /* Максимальна висота зображення */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* Загальні стилі для секції */
+#lab {
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
+/* Контейнер з текстом і зображенням */
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Вирівнює зображення і текст по вертикалі */
+  gap: 30px; /* Відступ між зображенням і текстом */
+}
+
+/* Зображення ліворуч */
+.image {
+  flex: 1; /* Зображення займає менше простору */
+  display: flex;
+  justify-content: center; /* Вирівнювання по горизонталі */
+  align-items: center; /* Вирівнювання по вертикалі */
+}
+
+.image img {
+  max-width: 100%;
+  max-height: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Текст праворуч */
+.text {
+  flex: 2; /* Текст займає більше простору */
+  text-align: justify; /* Вирівнювання тексту по ширині */
+}
+
+.text h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.text p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.text ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  padding-left: 20px;
+}
+
+.text ul li {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
+}
+/* Загальні стилі для секції */
+#guarantee {
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 30px auto;
+}
+
+/* Контейнер з текстом і зображенням */
+#guarantee .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Вирівнює зображення і текст по вертикалі */
+  gap: 30px; /* Відступ між зображенням і текстом */
+}
+
+/* Зображення ліворуч */
+#guarantee .image {
+  flex: 1; /* Зображення займає менше простору */
+  display: flex;
+  justify-content: center; /* Вирівнювання по горизонталі */
+  align-items: center; /* Вирівнювання по вертикалі */
+}
+
+#guarantee .image img {
+  max-width: 100%;
+  max-height: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Текст праворуч */
+#guarantee .text {
+  flex: 2; /* Текст займає більше простору */
+  text-align: justify; /* Вирівнювання тексту по ширині */
+}
+
+#guarantee .text h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#guarantee .text p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+#map iframe {
+  width: 100%;
+  height: 500px;
+  border: 0;
+}
+.social-icons img {
+  width: 24px; /* Set the icon width to 24px */
+  height: 24px; /* Set the icon height to 24px */
+  margin: 0 8px; /* Space between icons (reduced margin) */
+}
+
+.social-icons .social-icon {
+  width: 16px; /* Set the icon width to 16px */
+  height: 16px; /* Set the icon height to 16px */
+  margin: 0 5px; /* Reduced space between icons */
+}
+#footer {
+  background-color: #2c3e50; /* Dark background color */
+  color: white; /* White text */
+  padding: 20px 0; /* Vertical padding */
+  font-family: 'Arial', sans-serif; /* Font family */
+  text-align: center; /* Center text */
+}
+
+.footer-content {
+  display: flex; /* Flexbox layout */
+  justify-content: space-around; /* Space between columns */
+  max-width: 1200px; /* Maximum width */
+  margin: 0 auto; /* Center the footer */
+}
+
+.footer-column {
+  flex: 1; /* Allow columns to grow */
+  padding: 0 20px; /* Padding for each column */
+}
+
+.footer-column h3 {
+  margin-bottom: 10px; /* Spacing below headings */
+  font-size: 18px; /* Heading font size */
+}
+
+.footer-column ul {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+}
+
+.footer-column ul li {
+  margin: 5px 0; /* Space between list items */
+  cursor: pointer; /* Pointer cursor for list items */
+}
+
+.footer-column button {
+  background-color: #e74c3c; /* Button background */
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+  padding: 10px 15px; /* Button padding */
+  cursor: pointer; /* Pointer cursor */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.footer-column button:hover {
+  background-color: #c0392b; /* Darker red on hover */
+}
+
+.social-icons {
+  display: flex; /* Flexbox for social icons */
+  justify-content: center; /* Center icons */
+}
+
+.social-icons .social-icon {
+  width: 16px; /* Set the icon width to 16px */
+  height: 16px; /* Set the icon height to 16px */
+  margin: 0 5px; /* Reduced space between icons */
+}
+
+footer p {
+  margin-top: 20px; /* Space above copyright */
 }
