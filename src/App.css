@@ -219,3 +219,70 @@ footer a:hover {
     margin-bottom: 20px; /* Відступ між заголовком і меню */
   }
 }
+
+/* Загальні стилі для секції */
+#about {
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Контейнер з текстом і зображенням */
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Вирівнює зображення по вертикалі */
+  gap: 30px; /* Відступ між текстом і зображенням */
+}
+
+/* Текстова частина */
+.text {
+  flex: 2; /* Текст займає більше місця, ніж зображення */
+}
+
+.text h2:first-of-type {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.text h2:last-of-type {
+  font-size: 28px;
+  color: #007aff;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.text p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.text strong {
+  font-weight: bold;
+  color: #333;
+}
+
+.text .highlight {
+  font-weight: bold;
+  color: #aa1a6c;
+}
+
+/* Зображення по центру праворуч */
+.image {
+  flex: 1; /* Зображення займає менше простору */
+  display: flex;
+  justify-content: center; /* Вирівнювання по горизонталі */
+  align-items: center; /* Вирівнювання по вертикалі */
+}
+
+.image img {
+  max-width: 100%; /* Адаптація розміру зображення */
+  max-height: 400px; /* Максимальна висота зображення */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
